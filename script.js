@@ -45,7 +45,7 @@ window.onload = function () {
 
 function jogo() {
     //Configuração da tela
-    contexto.fillStyle = "#2980B9"
+    contexto.fillStyle = "#000000b5"
     //Distancia borda h, Distancia borda v, largura, altura
     contexto.fillRect(0, 0, canvas.width, canvas.height)
 

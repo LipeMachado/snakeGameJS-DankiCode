@@ -85,12 +85,13 @@ function jogo() {
     }
 
     // Configurando a comida
-    contexto.fillStyle = "#f10077"
+    contexto.fillStyle = "#f10200"
     contexto.fillRect(foodX * grid, foodY * grid, grid - 1, grid - 1)
     
     //Comendo a comida
     if (positionX == foodX && positionY == foodY) {
         tam++;
         foodX = Math.floor(Math.random() * grid)
+        foodY = Math.floor(Math.random() * grid)
     }
 }

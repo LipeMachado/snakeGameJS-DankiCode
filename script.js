@@ -46,6 +46,7 @@ window.onload = function () {
 function jogo() {
     //Configuração da tela
     contexto.fillStyle = "#000000b5"
+    
     //Distancia borda h, Distancia borda v, largura, altura
     contexto.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -67,17 +68,20 @@ function jogo() {
         positionY = 0;
     }
     
+    //Configuração da Cobra
+    contexto.fillStyle = "#00f102"
+    for (let i = 0; i < snake.length; i++) {
+        contexto.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1)
+        if (snake[i].x == positionX && snake[i].y == positionY) {
+            tam = 3;
+        }
+    }
+
     //Posicionando a cobra
     snake.push({
         x: positionX,
         y: positionY
     })
-
-    //Configuração da Cobra
-    contexto.fillStyle = "#00f102"
-    for (let i = 0; i < snake.length; i++) {
-        contexto.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1)
-    }
 
     //Apagando
     while (snake.length > tam) {

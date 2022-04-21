@@ -14,7 +14,7 @@ window.onload = function () {
     tam = 3;
 
     //Chamada da função jogo a cada 100 milisegundos
-    setInterval(jogo, 100)
+    setInterval(jogo, 120)
 
     //Controles
     document.addEventListener("keydown", function (e) {

@@ -4,13 +4,13 @@ window.onload = function () {
 
     //Variáveis
     snake = [];
-    positionX = 10;
-    positionY = 10;
+    positionX = 12;
+    positionY = 12;
     foodX = 15;
     foodY = 15;
     velX = 0;
     velY = 0;
-    grid = 20;
+    grid = 24;
     tam = 3;
 
     //Chamada da função jogo a cada 100 milisegundos
@@ -84,5 +84,13 @@ function jogo() {
         snake.shift()
     }
 
-    //
+    // Configurando a comida
+    contexto.fillStyle = "#f10077"
+    contexto.fillRect(foodX * grid, foodY * grid, grid - 1, grid - 1)
+    
+    //Comendo a comida
+    if (positionX == foodX && positionY == foodY) {
+        tam++;
+        foodX = Math.floor(Math.random() * grid)
+    }
 }

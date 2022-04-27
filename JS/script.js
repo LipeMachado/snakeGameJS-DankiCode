@@ -10,7 +10,7 @@ window.onload = function () {
     foodY = 15;
     velX = 0;
     velY = 0;
-    grid = 24;
+    grid = 20;
     tam = 3;
 
     //Chamada da função jogo a cada 100 milisegundos
